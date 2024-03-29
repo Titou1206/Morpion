@@ -23,7 +23,7 @@ function demarrer(e){
     //je retire la class display-none au btn rejouer et à la phrase pour qu'ils apparaissent
     rejouer.classList.remove("display-none");
     phrase.classList.remove("display-none");
-    psuivant.classList.remove("display-none");
+    //psuivant.classList.remove("display-none");
     //j'active le jeu
     jeu = 1
 }
@@ -43,7 +43,7 @@ function redemarrer(e){
     phrase.classList.remove("v1");
     phrase.classList.remove("v2");
     phrase.classList.remove("mnul")
-    psuivant.classList.remove("display-none");
+    //psuivant.classList.remove("display-none");
     //je réinitialise le joueur et réactive le jeu
     j=1;
     jeu=1
@@ -125,10 +125,29 @@ function coche(elt){
 function vainqueurPartie(elt){
     //si ttes les cases sont coché
     if(cases[0].classList.contains("coche")&&cases[1].classList.contains("coche")&&cases[2].classList.contains("coche")&&cases[3].classList.contains("coche")&&cases[4].classList.contains("coche")&&cases[5].classList.contains("coche")&&cases[6].classList.contains("coche")&&cases[7].classList.contains("coche")&&cases[8].classList.contains("coche")){
+        let txt = "Match nul !"
+        let winner = "mnul"
+        //pour chaque triplé du tableau tripleGagnant
+        tripleGagnant.forEach(triple=>{
+            //si les 3 cases sont coché d'une croix
+            if(triple[0].classList.contains("croix")&&triple[1].classList.contains("croix")&&triple[2].classList.contains("croix")){
+                // je change la phrase pour déclarer j1 vainqueur + change le style et met jeu=0 pour stoper jeu
+                txt = "VAINQUEUR: Joueur 1 !";
+                winner = "v1";
+                //+1point pour joueur 1
+                j1++;
+            }else if(triple[0].classList.contains("rond")&&triple[1].classList.contains("rond")&&triple[2].classList.contains("rond")){
+                // je change la phrase pour déclarer j2 vainqueur + change le style et met jeu=0 pour stoper jeu
+                txt = "VAINQUEUR: Joueur 2 !";
+                winner = "v2";
+                //+1point pour joueur 2
+                j2++;
+            }
         //je change la phrase pour dire quil y a match nul et lui applqiue mle  style mnul et met jeu=0 pour stoper je
-        phrase.innerText = "Match nul !";
-        phrase.classList.add("mnul");
+        phrase.innerText = txt;
+        phrase.classList.add(winner);
         jeu=0;
+        }) 
     //sinon
     }else{
         //pour chaque triplé du tableau tripleGagnant
@@ -152,6 +171,8 @@ function vainqueurPartie(elt){
         })
     }  
 }
+
+
 /*
 function vainqueurMatch(elt){
     if(j1===3){

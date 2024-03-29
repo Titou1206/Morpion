@@ -68,6 +68,14 @@ body{
     background-color: black;
 }
 
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .morpion-container{
 background: rgba(255, 255, 255, 0.26);
 border-radius: 16px;
@@ -77,8 +85,6 @@ backdrop-filter: blur(7.4px);
 border: 1px solid rgba(255, 255, 255, 0.57);
 width: 900px;
 padding: 20px;
-margin: 0 auto;
-margin-top: 40px;
 }
 
 
@@ -142,4 +148,42 @@ button{
     font-weight: bold;
     font-size: 2rem;
     color: purple;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+    .joueurs-container{
+        width: 400px;
+    }
+    .morpion-container{
+        width: 600px;
+    }
+    .morpion-grille{
+        width: 400px;
+        height: 400px;
+    }
+    .morpion-case{
+        width: calc(200px / 3 * 2);
+        height: calc(200px / 3 * 2);
+    }
+    .phrase{width: 350px;}
+}
+
+@media screen and (max-width: 599px) {
+    .joueurs-container{
+        width: 270px;
+    }
+    .morpion-container{
+            width: 300px;
+    }
+    .morpion-grille{
+        width: 270px;
+        height: 270px;
+    }
+    .morpion-case{
+        width: 90px;
+        height: 90px;
+    }
+    button{ padding: 5px 8px;}
+    .phrase{width: 250px;}
+    h1{font-size: 2rem;}
 }
