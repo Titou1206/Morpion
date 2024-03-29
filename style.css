@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.display-none{
+    display: none;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.mt20{
+    margin-top: 20px;
+}
+
+.mb40{
+    margin-bottom: 40px;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 3rem;
+    color: white;
+}
+
+.item{
+    width: 40px;
+    height: 40px;
+}
+
+.phrase{
+    width: 450px;
+    background-color: rgba(255, 255, 255, 0.452);
+    margin: 20px auto 0 auto;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.joueurs-container{
+    width: 600px;
+    margin: 20px auto 0 auto;
+}
+
+.joueur{
+    color: white;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.justify-center{
+    justify-content: center;
+}
+body{
+    background-color: black;
+}
+
+.morpion-container{
+background: rgba(255, 255, 255, 0.26);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.4px);
+-webkit-backdrop-filter: blur(7.4px);
+border: 1px solid rgba(255, 255, 255, 0.57);
+width: 900px;
+padding: 20px;
+margin: 0 auto;
+margin-top: 40px;
+}
+
+
+.coche{
+    cursor: default;
+}
+
+.croix{
+    background-image: url(./assets/croix.svg);
+    background-size:60%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.rond{
+    background-image: url(./assets/rond.svg);
+    background-size:60%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+button{
+    width: fit-content;
+    height: 30px;
+    cursor: pointer;
+    padding: 5px 20px;
+    background-color: rgb(61, 204, 61);
+    border-radius: 5px;
+}
+
+.morpion-grille{
+    width: 600px;
+    height: 600px;
+    margin: 20px auto 0 auto;
+    background-image: url(./assets/pexels-aykut-ercan-9609133.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 40%;
+}
+
+.morpion-case{
+    width: 200px;
+    height: 200px;
+    border: solid 2px black;
+    cursor: pointer;
+}
+
+.v1{
+    font-weight: bold;
+    font-size: 2rem;
+    color: red;
+}
+
+.v2{
+    font-weight: bold;
+    font-size: 2rem;
+    color: blue;
+}
+
+.mnul{
+    font-weight: bold;
+    font-size: 2rem;
+    color: purple;
+}

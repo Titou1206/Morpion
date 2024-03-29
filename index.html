@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="mt20">
+        <div class="morpion-container">
+            <h1 class="text-center">MORPION</h1>
+            <div class="joueurs-container flex justify-between align-center">
+                <div class="flex align-center">
+                    <p class="joueur">Joueur 1</p>
+                    <div class="item croix"></div>
+                </div>
+                <div class="button-container flex justify-center align-center">
+                    <button class="flex" id="jouer">Jouer</button>
+                    <button class="flex display-none" id="rejouer">Rejouer</button>
+                </div>
+                <div class="flex align-center">
+                    <p class="joueur">Joueur 2</p>
+                    <div class="item rond"></div>
+                </div>
+            </div>
+            <p id="phrase" class="phrase display-none text-center">Le jeu commence, c'est au tour du joueur 1</p>
+            <div class="morpion-grille flex">
+                <div id="c1" class="morpion-case"></div>
+                <div id="c2" class="morpion-case"></div>
+                <div id="c3" class="morpion-case"></div>
+                <div id="c4" class="morpion-case"></div>
+                <div id="c5" class="morpion-case"></div>
+                <div id="c6" class="morpion-case"></div>
+                <div id="c7" class="morpion-case"></div>
+                <div id="c8" class="morpion-case"></div>
+                <div id="c9" class="morpion-case"></div>
+            </div>
+        </div>
+    </main>
+    <script src="./app.js"></script>
+</body>
+</html>
