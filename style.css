@@ -186,4 +186,5 @@ button{
     button{ padding: 5px 8px;}
     .phrase{width: 250px;}
     h1{font-size: 2rem;}
+    .v1, .v2, .mnul {font-size: 1.2rem;}
 }
